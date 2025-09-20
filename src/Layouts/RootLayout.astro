@@ -1,13 +1,38 @@
 ---
-import '~styles/global.css';
-import Head, { type HeadProps } from '~components/Head.astro';
+import "~styles/global.css";
+import Head, { type HeadProps } from "~components/Head.astro";
 
 export interface Props {
   meta?: Partial<HeadProps>;
 }
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <Head></Head>
+<!doctype html>
+<html
+  lang="en"
+  class:list={[
+    "bg-white text-black dark:bg-black dark:text-white",
+    "antialiased font-body",
+    "container mx-auto px-4",
+  ]}
+>
+  <Head />
+  <body>
+    <header
+      class:list={[
+        "flex items-end justify-between",
+        "py-2 sm:py-4",
+        "font-display",
+        "border-b border-black/30 dark:border-white/30",
+      ]}
+    >
+      <a href={Astro.site}><h2 class="text-2xl">Krish Gupta</h2></a>
+      <nav>
+        <ul class="flex items-center gap-2">
+          <li><a href="https://krishg.com" target="_blank">Portfolio</a></li>
+          <li>—</li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>

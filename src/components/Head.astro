@@ -81,14 +81,14 @@ const {
 <meta property="og:image:height" content={image._.height.toString()} />
 <meta property="og:image:alt" content={image.alt} />
 
-{Astro.props.ogp!.type == 'article' && (
-  <meta property="og:article:published_time" content={Astro.props.ogp!.article.publishedTime} />
-  <meta property="og:article:modified_time" content={Astro.props.ogp!.article.modifiedTime} />
+{Astro.props.ogp?.type == 'article' && (
+  <meta property="og:article:published_time" content={Astro.props.ogp.article.publishedTime} />
+  <meta property="og:article:modified_time" content={Astro.props.ogp.article.modifiedTime} />
   <meta property="og:article:author" content="Krish Gupta" />
   <meta property="og:article:author:username" content="kkrishguptaa" />
 )}
 
-{Astro.props.ogp!.type == 'article' && Astro.props.ogp!.article.tags?.map((tag) => (
+{Astro.props.ogp?.type == 'article' && Astro.props.ogp.article.tags.map((tag) => (
   <meta property="og:article:tag" content={tag} />
 ))}
 

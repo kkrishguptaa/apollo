@@ -21,7 +21,3 @@
   --font-display: var(--font-space-grotesk), sans-serif;
   --font-body: var(--font-lexend), sans-serif;
 }
-
-:root {
-  @apply bg-white text-black dark:bg-black dark:text-white;
-}
