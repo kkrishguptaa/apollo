@@ -1,6 +1,10 @@
 ---
 import '~styles/global.css';
-import Head from '~components/Head.astro';
+import Head, { type HeadProps } from '~components/Head.astro';
+
+export interface Props {
+  meta?: Partial<HeadProps>;
+}
 ---
 
 <!DOCTYPE html>

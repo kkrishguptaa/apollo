@@ -17,6 +17,9 @@
   --color-pink-dark: #6e0134;
 
   --color-blue: #253894;
+
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-lexend), sans-serif;
 }
 
 :root {
