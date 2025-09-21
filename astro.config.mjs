@@ -25,7 +25,7 @@ export default defineConfig({
         cssVariable: "--font-space-grotesk",
         fallbacks: ["Montserrat", "Poppins", "sans-serif"],
         weights: ["400", "500", "600", "700", "900"],
-        display: "optional",
+        display: "block",
       },
       {
         provider: fontProviders.google(),
@@ -33,7 +33,7 @@ export default defineConfig({
         cssVariable: "--font-lexend",
         fallbacks: ["Inter", "Arial", "sans-serif"],
         weights: ["400", "500", "600", "700"],
-        display: "optional",
+        display: "swap",
       },
     ],
     contentIntellisense: true,
