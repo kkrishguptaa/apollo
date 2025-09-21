@@ -73,7 +73,10 @@ export default function Header({ siteUrl }: { siteUrl: URL }) {
           "h-14 md:h-max"
         )}
       >
-        <a href={siteUrl.toString()}>
+        <a
+          href={siteUrl.toString()}
+          className="hover:underline underline-offset-8"
+        >
           <h2 className="text-2xl">Krish Gupta</h2>
         </a>
         <nav className="hidden md:block">
@@ -88,6 +91,7 @@ export default function Header({ siteUrl }: { siteUrl: URL }) {
                         href={item.href}
                         onClick={item.onClick}
                         target={item.external ? "_blank" : undefined}
+                        className="hover:underline underline-offset-8"
                       >
                         {item.text}
                       </a>

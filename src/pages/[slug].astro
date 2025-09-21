@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
+import { getEntry } from "astro:content";
+import RootLayout from "~Layouts/RootLayout.astro";
+
+const { slug } = Astro.params;
+
+const blog = await getEntry("blog", slug!)!;
+
+export async function getStaticPaths() {
+  const blogs = await getCollection("blog");
+
+  return blogs.map((blog) => ({
+    params: { slug: blog.id },
+    props: { blog },
+  }));
+}
+
+const { Content } = await render(blog);
+---
+
+<RootLayout
+  head={{
+    title: blog.data.title + " | Krish Gupta",
+    description: blog.data.description,
+    ogp: {
+      type: "article",
+      image: {
+        _: blog.data.cover,
+        alt: blog.data.title,
+      },
+      article: {
+        publishedTime: blog.data.date.toDateString(),
+        modifiedTime: blog.data.date.toDateString(),
+        tags: blog.data.tags,
+      },
+    },
+  }}
+>
+  <article
+    class:list={[
+      "my-8",
+      "prose prose-lg dark:prose-invert",
+      "prose-headings:font-display",
+      "mx-auto",
+      "hover:prose-a:underline hover:prose-a:underline-offset-8",
+    ]}
+  >
+    <div class="mb-4 text-sm text-black/50 dark:text-white/50">
+      <span>
+        {
+          blog.data.date.toLocaleDateString("en-IN", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }
+        {
+          blog.data.tags.length > 0
+            ? ` • ${blog.data.tags.map((a) => `#${a}`).join(", ")}`
+            : ""
+        }
+      </span>
+    </div>
+    <h1>{blog.data.title}</h1>
+    <Content />
+  </article>
+</RootLayout>
