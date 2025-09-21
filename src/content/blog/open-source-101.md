@@ -7,7 +7,7 @@ tags:
   - git
   - github
 
-cover: ~assets/opensource-101.png
+cover: ~assets/opensource-101.webp
 ---
 
 The current state of tech on Twitter:
@@ -54,13 +54,13 @@ Short answer: It can.
 
 Long answer: It most probably will not. Getting a job entirely through open-source contributions is a new thing most companies are still not into. But open source can help you get a job in other ways.
 
-![Meme depicting the pride of getting a job via Open Source](~assets/opensource-job.png)
+![Meme depicting the pride of getting a job via Open Source](~assets/opensource-job.webp)
 
 ### Resume
 
 Open Source is a significant addition to your resume; it demonstrates collaboration and soft skills, as well as visible proof of your knowledge.
 
-![Meme depicting the pride of contributing to Open Source](~assets/opensource-resume.png)
+![Meme depicting the pride of contributing to Open Source](~assets/opensource-resume.webp)
 
 ### Skills
 
@@ -68,7 +68,7 @@ You can learn anything from industry professionals via the medium of open source
 
 I mean, developers these days post these memes on Twitter:
 
-![Sarcastic meme depicting developers preferring Open Source over project building to learn skills.](~assets/opensource-skills.jpg)
+![Sarcastic meme depicting developers preferring Open Source over project building to learn skills.](~assets/opensource-skills.webp)
 
 Ok. You got it. No one can design such a bad meme other than me, so it's me, but how did you know this? :|
 
@@ -78,7 +78,7 @@ Ok. You got it. No one can design such a bad meme other than me, so it's me, but
 
 Never. Open source is not a way to get a job; it is just a multiplier to increase your chances. Don't let open source take over everything, including portfolios and projects.
 
-![Sarcastic meme depicting developers skipping programming fundamentals for Open Source](~assets/opensource-attraction.jpg)
+![Sarcastic meme depicting developers skipping programming fundamentals for Open Source](~assets/opensource-attraction.webp)
 
 Yeah, imagine explaining that situation to your ~~partner~~ recruiter.
 
@@ -88,7 +88,7 @@ I contributed without any knowledge of computer science as an 8th-grade student.
 
 So I can, as a beginner, contribute to open source, but you can't?
 
-![Meme referencing Indian pop-culture to denote the hypocrisy of "beginners can't contribute to open source"](~assets/opensource-beginners.jpg)
+![Meme referencing Indian pop-culture to denote the hypocrisy of "beginners can't contribute to open source"](~assets/opensource-beginners.webp)
 
 ### You can not contribute to big projects
 
@@ -96,7 +96,7 @@ Where do big projects get their contributors from? If you think about it, every 
 
 I've made a PR React's documentation (which is in the queue right now); that proves that no matter how big a project might get, there is somewhere you can add value.
 
-![Meme depicting people contributing to ReactJs after reading this article.](~assets/opensource-big-contributions.png)
+![Meme depicting people contributing to ReactJs after reading this article.](~assets/opensource-big-contributions.webp)
 
 ### You have to be a dev to contribute
 
@@ -117,7 +117,7 @@ There are so many ways you can contribute! Why limit yourself to code contributi
 
 On a side note, anything that adds value is a contribution. (I'd also like to clarify that you do not need to contribute to only complex issues to be a great contributor for the same reason)
 
-![Diagram showing that open-source contributions can add value through code (features, refactoring, bug fixes, DX improvements) or no-code (docs, education, community, triaging).](~assets/no-code-contribution.png)
+![Diagram showing that open-source contributions can add value through code (features, refactoring, bug fixes, DX improvements) or no-code (docs, education, community, triaging).](~assets/no-code-contribution.webp)
 
 ## Let's do this
 

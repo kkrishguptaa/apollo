@@ -7,7 +7,7 @@ tags:
   - resume
   - career
 
-cover: ~assets/github-is-not-replacing-resumes.png
+cover: ~assets/github-is-not-replacing-resumes.webp
 ---
 
 GitHub Profiles are basically the future, every day GitHub is getting increasingly hungry to become your default resume 👀. I mean GitHub is adding more and more features every day to your GitHub Profile to make it become your github profile.
@@ -21,7 +21,7 @@ GitHub Profiles have:
 - The timezone, location you live in 👀
 - How can anyone forget that there is a custom readme you can write for the profile!?
 
-![Profile README file displayed on profile](~assets/profile-with-readme.png)
+![Profile README file displayed on profile](~assets/profile-with-readme.webp)
 
 I've seen a shift from tech recruiters looking on a sheet of paper (your resume) to looking at your github profile, and why wouldn't they?
 
@@ -33,7 +33,7 @@ I've seen a shift from tech recruiters looking on a sheet of paper (your resume)
 
 All of this, just one link, your github profile
 
-![Sarcastic meme depicting companies preferring GitHub Profiles over resumes.](~assets/github-resume.jpg)
+![Sarcastic meme depicting companies preferring GitHub Profiles over resumes.](~assets/github-resume.webp)
 
 Fun fact: Cool GitHub Profile = Companies come to you
 
@@ -41,7 +41,7 @@ Not joking, if you have an excellent github profile, companies find you - many c
 
 One example is me 🙋🏻 Everything I ever achieved, ever gained, ever learnt, all are credited to Open Source!
 
-![Meme depicting the pride of contributing to Open Source](~assets/oss-gatsby.jpg)
+![Meme depicting the pride of contributing to Open Source](~assets/oss-gatsby.webp)
 
 But nothing is just as simple, GitHub cannot replace your resume yet. Many recruiters would prefer a resume to have all your experiences and skills, just like they wouldn't want a designer to share their dribble, they do not want you to share your github :(
 

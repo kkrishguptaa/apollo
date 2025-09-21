@@ -6,7 +6,7 @@ tags:
   - linux
   - operating-system
 
-cover: ~assets/linux-101.png
+cover: ~assets/linux-101.webp
 ---
 
 I used to be a Windows user, but then I realized that Windows was holding me back. It was slow, buggy, and constantly bombarding me with annoying pop-up notifications. Plus, I could never customize it to my liking, no matter how hard I tried. But then I discovered Fedora Linux, and it was like a breath of fresh air. Now I can customize every aspect of my operating system, and I never have to worry about viruses or slowdowns. Plus, I can finally use the command line without feeling like I'm stuck in the 90s. Goodbye, Windows - I'll never look back!
@@ -32,7 +32,7 @@ Linux solved all of these in an instance.
 
 Linux is a kernel. A kernel is a program that manages hardware resources for the user. It connects the operating system to the hardware.
 
-![a diagram indicating kernel architecture, with kernel in its center ring, shell in its middle ring and application in its outer ring](~/assets/kernel-architecture.png)
+![a diagram indicating kernel architecture, with kernel in its center ring, shell in its middle ring and application in its outer ring](~/assets/kernel-architecture.webp)
 
 ### GNU
 
@@ -98,7 +98,7 @@ I am not going to be an old grandpa and talk about the distributions that died e
 
 - Debian (Parent of Ubuntu):
 
-  ![A Screenshot of Debian with GNOME](~assets/debian-with-gnome.png)
+  ![A Screenshot of Debian with GNOME](~assets/debian-with-gnome.webp)
 
   The name "Debian" comes from the name of Ian's girlfriend at the time Debra and their name combined, Debian introduced many things like:
 
@@ -108,7 +108,7 @@ I am not going to be an old grandpa and talk about the distributions that died e
 
 - Fedora
 
-  ![Fedora Linux with GNOME](~assets/fedora-with-gnome.png)
+  ![Fedora Linux with GNOME](~assets/fedora-with-gnome.webp)
 
   Fedora is based on the Red Hat Enterprise Linux, I am not giving Red Hat Enterprise Linux a separate section because it's enterprise and it should probably not be your first operating system 😅
 
@@ -119,7 +119,7 @@ I am not going to be an old grandpa and talk about the distributions that died e
 
 - Arch
 
-  ![Arch Linux Desktop](~assets/arch-linux.avif)
+  ![Arch Linux Desktop](~assets/arch-linux.webp)
 
   Arch Linux is a very cool distribution, don't get me wrong, it is very very cool. But dare not use it as your first distribution, I won't even dare use it as my 10th distribution. Arch is very much like bare bone Linux, you build everything on top, so unless you are looking for a million sleepless nights, don't.
 
@@ -127,7 +127,7 @@ I am not going to be an old grandpa and talk about the distributions that died e
 
 Linux is Open Source!!! Anyone can modify and distribute the source code because it is freely available. This enables a large and active developer community to contribute to the development of Linux and create a diverse set of tools and applications.
 
-![A minions meme highlighting the open source feature comically](~assets/minions-opensource.png)
+![A minions meme highlighting the open source feature comically](~assets/minions-opensource.webp)
 
 Linux is also extremely configurable, making it an excellent alternative for developers looking to customize their operating system to their exact requirements. Furthermore, Linux is well-known for its stability and dependability, making it an excellent choice for running mission-critical applications. Linux is also very scalable, which means it can run on a variety of hardware, ranging from small IoT devices to huge servers.
 
@@ -135,7 +135,7 @@ Linux is also extremely configurable, making it an excellent alternative for dev
 
 My desktop looks like this:
 
-![Krish's Fedora with KDE Configuration](~assets/krishs-fedora-desktop.png)
+![Krish's Fedora with KDE Configuration](~assets/krishs-fedora-desktop.webp)
 
 Another advantage of Linux is that it provides a diverse set of developer tools and applications, including a robust command line interface and a diverse set of programming languages and libraries. Furthermore, Linux is compatible with a wide range of software, including both open-source and proprietary applications. This makes it an excellent alternative for developers who wish to work with a diverse set of tools and technologies.
 
@@ -176,4 +176,4 @@ Installation is guided by what distro you use. But mostly it is going to be a GU
 2. Consider setting up dotfiles!
 3. Get your favorite packages and applications installed
 
-![Meme depicting the power unlocked after mastering linux](~assets/linux-power-users.jpg)
+![Meme depicting the power unlocked after mastering linux](~assets/linux-power-users.webp)
