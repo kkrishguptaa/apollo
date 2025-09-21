@@ -1,10 +1,13 @@
-import { SiGithub, SiInstagram, SiX } from "@icons-pack/react-simple-icons";
-import { MenuIcon, XIcon } from "lucide-react";
-import React from "react";
+import { useState } from "preact/compat";
 import { cn } from "~lib/utils";
+import MenuIcon from "./icons/MenuIcon";
+import XIcon from "./icons/XIcon";
+import TwitterIcon from "./icons/TwitterIcon";
+import GitHubIcon from "./icons/GitHubIcon";
+import InstagramIcon from "./icons/InstagramIcon";
 
 export default function Header({ siteUrl }: { siteUrl: URL }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const items: Array<
     | {
@@ -42,22 +45,22 @@ export default function Header({ siteUrl }: { siteUrl: URL }) {
   ];
 
   const socials: {
-    icon: typeof SiX;
+    icon: typeof TwitterIcon;
     href: string;
     text: string;
   }[] = [
     {
-      icon: SiX,
+      icon: TwitterIcon,
       href: "https://x.com/kkrishguptaa",
       text: "Twitter",
     },
     {
-      icon: SiGithub,
+      icon: GitHubIcon,
       href: "https://github.com/kkrishguptaa",
       text: "GitHub",
     },
     {
-      icon: SiInstagram,
+      icon: InstagramIcon,
       href: "https://instagram.com/kkrishguptaa",
       text: "Instagram",
     },
@@ -109,7 +112,7 @@ export default function Header({ siteUrl }: { siteUrl: URL }) {
                   rel="noopener noreferrer"
                   className="hover:opacity-70"
                 >
-                  <social.icon size={16} />
+                  <social.icon height={16} width={16} />
                 </a>
               </li>
             ))}
@@ -166,7 +169,7 @@ export default function Header({ siteUrl }: { siteUrl: URL }) {
             {socials.map((social, index) => (
               <li key={`social-${index}`}>
                 <a href={social.href} target="_blank" rel="noopener noreferrer">
-                  <social.icon size={24} />
+                  <social.icon height={24} width={24} />
                 </a>
               </li>
             ))}

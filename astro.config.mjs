@@ -6,12 +6,17 @@ import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
-
-import react from "@astrojs/react";
+import preact from "@astrojs/preact";
 
 export default defineConfig({
   site: "https://blog.krishg.com",
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    preact({
+      compat: true,
+    }),
+  ],
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],

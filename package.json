@@ -10,22 +10,23 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.5",
-    "@astrojs/react": "^4.3.1",
+    "@astrojs/preact": "^4.1.1",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/vercel": "^8.2.7",
-    "@icons-pack/react-simple-icons": "^13.7.0",
     "@tailwindcss/typography": "^0.5.18",
     "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "astro": "^5.13.9",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.544.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "preact": "^10.27.2",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
   }
 }
