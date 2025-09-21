@@ -4,8 +4,8 @@ import { Font } from 'astro:assets';
 import DefaultOpenGraphImage from '~assets/og-image.png';
 
 type OpenGraphProtocol = {
-    type?: 'website'
-    image?: {
+    type: 'website'
+    image: {
       _: ImageMetadata,
       alt: string
     }
@@ -33,14 +33,22 @@ export type Props = Partial<HeadProps>;
 const siteName = "Krish Gupta's Blog"
 const siteUrl = new URL(Astro.url.pathname, Astro.site);
 
-const {
-  title = siteName,
-  description = "The Home of Krish Gupta on the Internet. Articles on Web Development, Programming, Tech and more.",
+const defaultProps = {
+  title: siteName,
+  description: "The Home of Krish Gupta on the Internet. Articles on Web Development, Programming, Tech and more.",
   ogp: {
-    type = 'website',
-    image = { _: DefaultOpenGraphImage, alt: 'Krish Gupta Blog' },
-  } = {}
-} = Astro.props;
+    type: 'website',
+    image: {
+      _: DefaultOpenGraphImage,
+      alt: 'Krish Gupta about Web Development, Programming, Tech and more.',
+    }
+  }
+} as HeadProps;
+
+const props = Astro.props;
+
+const { title, description } = { ...defaultProps, ...props };
+const { type, image } = { ...defaultProps.ogp, ...props.ogp };
 ---
 
 <meta charset="utf-8" />
