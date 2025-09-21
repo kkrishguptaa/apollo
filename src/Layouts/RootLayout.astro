@@ -1,6 +1,7 @@
 ---
 import "~styles/global.css";
 import Head, { type HeadProps } from "~components/Head.astro";
+import Header from "~components/Header";
 
 export interface Props {
   meta?: Partial<HeadProps>;
@@ -18,21 +19,7 @@ export interface Props {
 >
   <Head />
   <body>
-    <header
-      class:list={[
-        "flex items-end justify-between",
-        "py-2 sm:py-4",
-        "font-display",
-        "border-b border-black/30 dark:border-white/30",
-      ]}
-    >
-      <a href={Astro.site}><h2 class="text-2xl">Krish Gupta</h2></a>
-      <nav>
-        <ul class="flex items-center gap-2">
-          <li><a href="https://krishg.com" target="_blank">Portfolio</a></li>
-          <li>—</li>
-        </ul>
-      </nav>
-    </header>
+    <Header siteUrl={Astro.site!} client:media="(max-width: 768px)" />
+    <slot />
   </body>
 </html>

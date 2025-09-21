@@ -7,9 +7,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
 
+import react from "@astrojs/react";
+
 export default defineConfig({
   site: "https://blog.krishg.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), react()],
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
