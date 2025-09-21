@@ -13,4 +13,10 @@ export async function GET(context) {
   // 		link: `/blog/${post.id}/`,
   // 	})),
   // });
+
+  return new Response({
+    status: 200,
+    statusText: "OK",
+    data: "RSS feed is currently disabled.",
+  });
 }
