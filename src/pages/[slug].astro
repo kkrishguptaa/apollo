@@ -26,10 +26,7 @@ const { Content } = await render(blog);
     description: blog.data.description,
     ogp: {
       type: "article",
-      image: {
-        _: blog.data.cover,
-        alt: blog.data.title,
-      },
+      image: blog.data.cover,
       article: {
         publishedTime: blog.data.date.toDateString(),
         modifiedTime: blog.data.date.toDateString(),
