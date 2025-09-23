@@ -27,7 +27,7 @@ blogs.sort((a, b) => {
       {
         blogs.map((blog) => (
           <article class="flex flex-col flex-grow border max-w-sm gap-2 p-4 border-black/10 dark:border-white/10">
-            <Image src={blog.data.cover} alt={blog.data.title} class="mb-2" />
+            <Image src={blog.data.cover} alt={blog.data.title} width="350" class="mb-2" />
             <a
               href={new URL(blog.id, Astro.url)}
               class="hover:underline underline-offset-8 mb-2"

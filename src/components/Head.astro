@@ -2,6 +2,7 @@
 import type { ImageMetadata } from 'astro';
 import { Font } from 'astro:assets';
 import DefaultOpenGraphImage from '~assets/og-image.webp';
+import * as shared from '~shared'
 
 type OpenGraphProtocol = {
     type: 'website'
@@ -30,17 +31,17 @@ export interface HeadProps {
 
 export type Props = Partial<HeadProps>;
 
-const siteName = "Krish Gupta's Blog"
+const siteName = shared.title
 const siteUrl = new URL(Astro.url.pathname, Astro.site);
 
 const defaultProps = {
   title: siteName,
-  description: "The Home of Krish Gupta on the Internet. Articles on Web Development, Programming, Tech and more.",
+  description: shared.description,
   ogp: {
     type: 'website',
     image: {
       _: DefaultOpenGraphImage,
-      alt: 'Krish Gupta about Web Development, Programming, Tech and more.',
+      alt: `Krish Gupta's blog about ${shared.topics.join(', ')} and more.`,
     }
   }
 } as HeadProps;

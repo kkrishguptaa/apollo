@@ -6,18 +6,21 @@ import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
-import preact from "@astrojs/preact";
+import sentry from "@sentry/astro";
 
 export default defineConfig({
   site: "https://blog.krishg.com",
-  integrations: [
-    mdx(),
-    sitemap(),
-    preact({
-      compat: true,
-    }),
-  ],
-  adapter: vercel(),
+  output: "static",
+
+  integrations: [sitemap({
+
+  }), mdx(), sentry()],
+
+  adapter: vercel({
+    imageService: false,
+    devImageService: 'sharp',
+  }),
+
   vite: {
     plugins: [tailwindcss()],
   },
