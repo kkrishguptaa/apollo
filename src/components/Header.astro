@@ -1,35 +1,35 @@
 ---
-import TwitterIcon from "./icons/TwitterIcon.astro";
-import GitHubIcon from "./icons/GitHubIcon.astro";
-import InstagramIcon from "./icons/InstagramIcon.astro";
-import MenuIcon from "./icons/MenuIcon.astro";
-import XIcon from "./icons/XIcon.astro";
+import GitHubIcon from './icons/GitHubIcon.astro';
+import InstagramIcon from './icons/InstagramIcon.astro';
+import MenuIcon from './icons/MenuIcon.astro';
+import TwitterIcon from './icons/TwitterIcon.astro';
+import XIcon from './icons/XIcon.astro';
 
 const items: Array<
   | {
-      type: "link";
+      type: 'link';
       text: string;
       href: string;
       external?: boolean;
       mobileOnly?: boolean;
     }
   | {
-      type: "separator";
+      type: 'separator';
     }
 > = [
   {
-    type: "link",
-    text: "Home",
+    type: 'link',
+    text: 'Home',
     href: Astro.site!.toString(),
     mobileOnly: true,
   },
   {
-    type: "link",
-    text: "Portfolio",
-    href: "https://krishg.com",
+    type: 'link',
+    text: 'Portfolio',
+    href: 'https://krishg.com',
     external: true,
   },
-  { type: "separator" },
+  { type: 'separator' },
 ];
 
 const socials: {
@@ -39,18 +39,18 @@ const socials: {
 }[] = [
   {
     icon: TwitterIcon,
-    href: "https://x.com/kkrishguptaa",
-    text: "Twitter",
+    href: 'https://x.com/kkrishguptaa',
+    text: 'Twitter',
   },
   {
     icon: GitHubIcon,
-    href: "https://github.com/kkrishguptaa",
-    text: "GitHub",
+    href: 'https://github.com/kkrishguptaa',
+    text: 'GitHub',
   },
   {
     icon: InstagramIcon,
-    href: "https://instagram.com/kkrishguptaa",
-    text: "Instagram",
+    href: 'https://instagram.com/kkrishguptaa',
+    text: 'Instagram',
   },
 ];
 ---

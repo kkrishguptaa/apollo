@@ -1,31 +1,33 @@
 ---
-import type { ImageMetadata } from 'astro';
 import { Font } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import DefaultOpenGraphImage from '~assets/og-image.webp';
-import * as shared from '~shared'
+import * as shared from '~shared';
 
-type OpenGraphProtocol = {
-    type: 'website'
-    image: ImageMetadata,
-} | {
-    type: 'article';
-    image: ImageMetadata,
-    article: {
-      publishedTime: string;
-      modifiedTime: string;
-      tags: string[];
+type OpenGraphProtocol =
+  | {
+      type: 'website';
+      image: ImageMetadata;
     }
-};
+  | {
+      type: 'article';
+      image: ImageMetadata;
+      article: {
+        publishedTime: string;
+        modifiedTime: string;
+        tags: string[];
+      };
+    };
 
 export interface HeadProps {
-	title: string;
-	description: string;
-	ogp: OpenGraphProtocol;
+  title: string;
+  description: string;
+  ogp: OpenGraphProtocol;
 }
 
 export type Props = Partial<HeadProps>;
 
-const siteName = shared.title
+const siteName = shared.title;
 const siteUrl = new URL(Astro.url.pathname, Astro.site);
 
 const defaultProps = {
@@ -34,7 +36,7 @@ const defaultProps = {
   ogp: {
     type: 'website',
     image: DefaultOpenGraphImage,
-  }
+  },
 } as HeadProps;
 
 const props = Astro.props;

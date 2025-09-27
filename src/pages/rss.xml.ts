@@ -1,12 +1,12 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
-import { title, description, site } from '~shared';
+import { description, site, title } from '~shared';
 
 export async function GET() {
   const posts = await getCollection('blog');
 
   return rss({
-  	title,
+    title,
     description,
     site,
     items: posts.map((post) => {
@@ -17,12 +17,12 @@ export async function GET() {
         categories: post.data.tags,
         content: post.rendered?.html,
         pubDate: post.data.date,
-        author: "m.krishggupta@icloud.com (Krish Gupta)",
+        author: 'm.krishggupta@icloud.com (Krish Gupta)',
         source: {
           title,
-          url: new URL('rss.xml', site).toString()
-        }
-      }
+          url: new URL('rss.xml', site).toString(),
+        },
+      };
     }),
   });
 }
