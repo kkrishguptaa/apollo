@@ -3,7 +3,7 @@ import RootLayout from "./RootLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import chunk from "lodash.chunk";
-import { config } from "~shared";
+import { config, site } from "~shared";
 
 export interface Props {
   currentPage: number;
@@ -49,7 +49,7 @@ const blogs = chunks[currentPage - 1]!;
               }
             />
             <a
-              href={new URL(blog.id, Astro.url)}
+              href={new URL(blog.id, site)}
               class="hover:underline underline-offset-8 mb-2"
             >
               <h2 class="text-2xl font-semibold">{blog.data.title}</h2>
@@ -65,7 +65,7 @@ const blogs = chunks[currentPage - 1]!;
               {blog.data.description}
             </p>
             <a
-              href={new URL(blog.id, Astro.url)}
+              href={new URL(blog.id, site)}
               class="mt-4 hover:underline underline-offset-8 mb-2"
             >
               Read More &rarr;
@@ -80,7 +80,7 @@ const blogs = chunks[currentPage - 1]!;
           <nav class="flex justify-center gap-4">
             {chunks.map((_, index) => (
               <a
-                href={new URL(index === 0 ? "/" : `/${index + 1}`, Astro.site)}
+                href={new URL(index === 0 ? "/" : `/${index + 1}`, site)}
                 class:list={[
                   "px-4 py-2",
                   "border border-black/10 dark:border-white/10",

@@ -1,35 +1,36 @@
 ---
-import GitHubIcon from './icons/GitHubIcon.astro';
-import InstagramIcon from './icons/InstagramIcon.astro';
-import MenuIcon from './icons/MenuIcon.astro';
-import TwitterIcon from './icons/TwitterIcon.astro';
-import XIcon from './icons/XIcon.astro';
+import { site } from "~shared";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+import MenuIcon from "./icons/MenuIcon.astro";
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import XIcon from "./icons/XIcon.astro";
 
 const items: Array<
   | {
-      type: 'link';
+      type: "link";
       text: string;
       href: string;
       external?: boolean;
       mobileOnly?: boolean;
     }
   | {
-      type: 'separator';
+      type: "separator";
     }
 > = [
   {
-    type: 'link',
-    text: 'Home',
-    href: Astro.site!.toString(),
+    type: "link",
+    text: "Home",
+    href: site.toString(),
     mobileOnly: true,
   },
   {
-    type: 'link',
-    text: 'Portfolio',
-    href: 'https://krishg.com',
+    type: "link",
+    text: "Portfolio",
+    href: "https://krishg.com",
     external: true,
   },
-  { type: 'separator' },
+  { type: "separator" },
 ];
 
 const socials: {
@@ -39,18 +40,18 @@ const socials: {
 }[] = [
   {
     icon: TwitterIcon,
-    href: 'https://x.com/kkrishguptaa',
-    text: 'Twitter',
+    href: "https://x.com/kkrishguptaa",
+    text: "Twitter",
   },
   {
     icon: GitHubIcon,
-    href: 'https://github.com/kkrishguptaa',
-    text: 'GitHub',
+    href: "https://github.com/kkrishguptaa",
+    text: "GitHub",
   },
   {
     icon: InstagramIcon,
-    href: 'https://instagram.com/kkrishguptaa',
-    text: 'Instagram',
+    href: "https://instagram.com/kkrishguptaa",
+    text: "Instagram",
   },
 ];
 ---
@@ -64,10 +65,7 @@ const socials: {
     "h-14 md:h-max",
   ]}
 >
-  <a
-    href={Astro.site!.toString()}
-    class:list={["hover:underline underline-offset-8"]}
-  >
+  <a href={site.toString()} class:list={["hover:underline underline-offset-8"]}>
     <h2 class:list={["text-2xl"]}>Krish Gupta</h2>
   </a>
   <nav class:list={["hidden md:block"]}>
@@ -89,7 +87,11 @@ const socials: {
                 </li>
               );
             } else {
-              return <li><span>—</span></li>
+              return (
+                <li>
+                  <span>—</span>
+                </li>
+              );
             }
           })
       }
@@ -119,9 +121,12 @@ const socials: {
     ]}
   >
     <MenuIcon id="menu-icon" />
-    <XIcon id="close-icon" style={{
-      display: "none"
-    }} />
+    <XIcon
+      id="close-icon"
+      style={{
+        display: "none",
+      }}
+    />
   </button>
 </header>
 
@@ -138,7 +143,7 @@ const socials: {
     "translate-x-[100vw]",
   ]}
   style={{
-    translate: "100vw 0"
+    translate: "100vw 0",
   }}
 >
   <nav
@@ -188,13 +193,13 @@ const socials: {
   button.addEventListener("click", () => {
     mobileMenuOpen = !mobileMenuOpen;
     if (mobileMenuOpen) {
-      menu.style.translate = "0 0"
-      menuIcon.style.display = 'none'
-      closeIcon.style.display = 'block'
+      menu.style.translate = "0 0";
+      menuIcon.style.display = "none";
+      closeIcon.style.display = "block";
     } else {
-      menu.style.translate = "100vw 0"
-      menuIcon.style.display = 'block'
-      closeIcon.style.display = 'none'
+      menu.style.translate = "100vw 0";
+      menuIcon.style.display = "block";
+      closeIcon.style.display = "none";
     }
   });
 </script>
