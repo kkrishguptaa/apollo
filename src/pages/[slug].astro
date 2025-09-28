@@ -1,13 +1,13 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content';
-import RootLayout from '~Layouts/RootLayout.astro';
+import { getCollection, getEntry, render } from "astro:content";
+import RootLayout from "~layouts/RootLayout.astro";
 
 const { slug } = Astro.params;
 
-const blog = await getEntry('blog', slug!)!;
+const blog = await getEntry("blog", slug!)!;
 
 export async function getStaticPaths() {
-  const blogs = await getCollection('blog');
+  const blogs = await getCollection("blog");
 
   return blogs.map((blog) => ({
     params: { slug: blog.id },

@@ -1,9 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import RootLayout from '~Layouts/RootLayout.astro';
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import RootLayout from "~layouts/RootLayout.astro";
 
-const blogs = await getCollection('blog');
+const blogs = await getCollection("blog");
 
 blogs.sort((a, b) => {
   return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
@@ -27,9 +27,14 @@ blogs.sort((a, b) => {
       {
         blogs.map((blog, index) => (
           <article class="flex flex-col flex-grow border max-w-sm gap-2 p-4 border-black/10 dark:border-white/10">
-            <Image src={blog.data.cover} densities={[2]} alt={blog.data.title} width="350" class="mb-2" loading={
-              blogs.length - 12 < index ? "eager" : "lazy"
-            } />
+            <Image
+              src={blog.data.cover}
+              densities={[2]}
+              alt={blog.data.title}
+              width="350"
+              class="mb-2"
+              loading={blogs.length - 12 < index ? "eager" : "lazy"}
+            />
             <a
               href={new URL(blog.id, Astro.url)}
               class="hover:underline underline-offset-8 mb-2"
