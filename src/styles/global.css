@@ -18,6 +18,6 @@
 
   --color-blue: #253894;
 
-  --font-display: var(--font-space-grotesk), sans-serif;
-  --font-body: var(--font-lexend), sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-sans), sans-serif;
+  --font-body: var(--font-lexend), var(--font-sans),sans-serif;
 }
