@@ -31,6 +31,7 @@ export default defineConfig({
         weights: ["400 700"],
         styles: ["normal"],
         subsets: ["latin"],
+        optimizedFallbacks: false,
         display: "swap",
       },
       {
