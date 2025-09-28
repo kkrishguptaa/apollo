@@ -3,13 +3,13 @@ import rss from '@astrojs/rss';
 import { description, site, title } from '~shared';
 
 export async function GET() {
-  const posts = await getCollection('blog');
+  const blog = await getCollection('blog');
 
   return rss({
     title,
     description,
     site,
-    items: posts.map((post) => {
+    items: blog.map((post) => {
       return {
         title: post.data.title,
         link: new URL(post.id, site).toString(),

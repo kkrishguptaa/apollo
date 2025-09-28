@@ -17,6 +17,10 @@ export default defineConfig({
     devImageService: "sharp",
   }),
 
+  image: {
+    layout: "constrained",
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },

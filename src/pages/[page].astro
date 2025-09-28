@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import HomeLayout from "~layouts/HomeLayout.astro";
+import chunk from "lodash.chunk";
+import { config } from "~shared";
+
+export async function getStaticPaths() {
+  const data = await getCollection("blog");
+
+  const chunks = chunk(data, config.blogs.chunks.size);
+
+  return chunks.map((_, index) => ({
+    params: { page: (index + 1).toString() },
+    props: { currentPage: index + 1 },
+  }));
+}
+
+const { currentPage } = Astro.props;
+---
+
+<HomeLayout currentPage={currentPage} />
