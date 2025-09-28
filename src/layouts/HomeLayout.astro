@@ -41,12 +41,8 @@ const blogs = chunks[currentPage - 1]!;
               alt={blog.data.title}
               width="350"
               class="mb-2"
-              loading={
-                blogs.length - config.blogs.priority < index ? "eager" : "lazy"
-              }
-              fetchpriority={
-                blogs.length - config.blogs.priority < index ? "high" : "low"
-              }
+              loading={index <= config.blogs.priority ? "eager" : "lazy"}
+              fetchpriority={index <= config.blogs.priority ? "high" : "low"}
             />
             <a
               href={new URL(blog.id, site)}
