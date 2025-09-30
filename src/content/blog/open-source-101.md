@@ -16,7 +16,7 @@ The current state of tech on Twitter:
 - "Open Source experience should be included on every developer's resume."
 - "GitHub is your resume!"
 
-![Spongebob making a rainbow with his hands that says "Open Source"](~assets/spongebob-open-source.gif)
+![Spongebob making a rainbow with his hands that says "Open Source"](~assets/spongebob-open-source.webp)
 
 Okay, I admit that the last one is just me.
 
@@ -42,7 +42,7 @@ So most people joke about Open Source software not being good :/
 
 Especially about Linux,
 
-![A GIF mocking Linux's Window Servers](~assets/mocking-linux-users.gif)
+![A GIF mocking Linux's Window Servers](~assets/mocking-linux-users.webp)
 
 What most people don't realize is that almost all of the code in your browser is open source. The entirety of the internet's backend is also open source, as is this [blog](https://github.com/kkrishguptaa/apollo) and the software used to built it! It does not take a good while to realize how much of your life is open source.
 
@@ -129,7 +129,7 @@ So let me be clear: where I can help you, and where I can't:
 - ✅ First steps on making your first pr
 - ❌ Listing projects that you should contribute to (✅ I will tell you how to find them here though)
 
-![Lets Do This](~assets/lets-do-this.gif)
+![Lets Do This](~assets/lets-do-this.webp)
 
 ### Step 1: Git & GitHub
 

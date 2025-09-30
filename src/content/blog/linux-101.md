@@ -84,7 +84,7 @@ Torvalds and an expanding community of contributors collaborated to create the L
 
 Today, Linux and GNU are two of the world's most popular and significant open-source initiatives. The Linux kernel is at the heart of the Linux operating system, and the GNU tools and libraries work in tandem with it to create a complete operating system. Together, Linux and GNU have had a major influence on the world of technology, inspiring and enabling cooperation and creativity among programmers and users all over the world.
 
-![A GIF highlighting that it's Open Source](~/assets/spongebob-open-source.gif)
+![A GIF highlighting that it's Open Source](~/assets/spongebob-open-source.webp)
 
 ### Linux Distributions and how they developed?
 
